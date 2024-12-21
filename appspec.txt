@@ -1,0 +1,16 @@
+version: 0
+os: linux
+files:
+  - source: /
+    destination: /var/www/penguin
+file_exists_behavior: OVERWRITE
+hooks:
+  BeforeInstall:
+    - location: scripts/beforeinstall.sh
+  AfterInstall:
+    - location: scripts/afterinstall.sh
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/afterinstall.sh
+      timeout: 300
+      runas: root
