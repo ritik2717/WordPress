@@ -2,7 +2,7 @@ version: 0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/demo.avertech.cloud
+    destination: /var/www/html/mayank.avertech.cloud
 file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
